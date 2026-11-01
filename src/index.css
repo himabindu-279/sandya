@@ -1,0 +1,336 @@
+/* -------------------------------------------------------------
+   HER LITTLE UNIVERSE – CHAPTER 20
+   Design System: Dreamy, Feminine, Modern & Luxurious
+   ------------------------------------------------------------- */
+
+:root {
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-display: 'Playfair Display', 'Cormorant Garamond', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-script: 'Dancing Script', 'Caveat', cursive;
+
+  /* Color System */
+  --bg-canvas: #fcf7f8;
+  --bg-cream: #fffcf9;
+  --bg-blush: #fdf2f4;
+  --bg-lavender: #f7f2fb;
+  --bg-peach: #fff5ee;
+
+  --primary-rose: #c87d8e;
+  --primary-rose-hover: #b8697c;
+  --primary-deep: #542d38;
+  --text-main: #3e242d;
+  --text-muted: #7d5964;
+  --text-light: #a4828c;
+
+  --accent-gold: #d4a373;
+  --accent-sparkle: #f3c27e;
+  --accent-lavender: #b08dd6;
+
+  --glass-bg: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.88);
+  --glass-shadow: 0 12px 36px -8px rgba(180, 100, 125, 0.12), 0 4px 16px -2px rgba(180, 100, 125, 0.06);
+  --card-shadow: 0 16px 40px -12px rgba(150, 80, 105, 0.1), 0 2px 8px rgba(150, 80, 105, 0.04);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--bg-canvas);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  background: 
+    radial-gradient(circle at 15% 10%, rgba(253, 231, 236, 0.8), transparent 35%),
+    radial-gradient(circle at 85% 25%, rgba(243, 232, 248, 0.75), transparent 40%),
+    radial-gradient(circle at 50% 60%, rgba(255, 240, 232, 0.7), transparent 45%),
+    radial-gradient(circle at 20% 85%, rgba(253, 226, 235, 0.75), transparent 40%),
+    radial-gradient(circle at 80% 90%, rgba(242, 234, 250, 0.8), transparent 40%),
+    #fffbf9;
+  min-height: 100vh;
+}
+
+/* Typography Helpers */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 1.5rem;
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 18px -2px rgba(180, 100, 125, 0.12);
+  border-radius: 9999px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: var(--card-shadow);
+  border-radius: 1.25rem;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px -12px rgba(180, 95, 120, 0.18);
+  border-color: rgba(255, 235, 240, 0.95);
+}
+
+/* Button Styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0.875rem 2rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background: linear-gradient(135deg, #d48296 0%, #ba6378 50%, #9e4b60 100%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px -4px rgba(186, 99, 120, 0.38), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 30px -4px rgba(186, 99, 120, 0.48), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  background: linear-gradient(135deg, #dc8aa0 0%, #bf697e 50%, #a65267 100%);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.75rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.92rem;
+  color: var(--primary-deep);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(212, 130, 150, 0.3);
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(180, 100, 125, 0.08);
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background: #ffffff;
+  border-color: rgba(212, 130, 150, 0.6);
+  transform: translateY(-1px);
+}
+
+/* Polaroid Card Styles */
+.polaroid-frame {
+  background: #ffffff;
+  padding: 1rem 1rem 2.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 14px 34px -8px rgba(140, 80, 100, 0.16), 0 3px 10px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+}
+
+.polaroid-frame:hover {
+  transform: translateY(-6px) rotate(0deg) scale(1.02) !important;
+  box-shadow: 0 24px 50px -10px rgba(160, 80, 110, 0.24);
+  z-index: 20;
+}
+
+.washi-tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 24px;
+  background: rgba(246, 218, 226, 0.8);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  backdrop-filter: blur(2px);
+  clip-path: polygon(4% 0%, 96% 0%, 100% 100%, 0% 100%);
+  z-index: 10;
+}
+
+/* Candle Animations */
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px rgba(255, 180, 50, 0.85));
+  }
+  25% {
+    transform: scale(1.08, 0.94) rotate(1.5deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 14px rgba(255, 195, 80, 0.95));
+  }
+  50% {
+    transform: scale(0.96, 1.05) rotate(-1.5deg);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 10px rgba(255, 170, 40, 0.8));
+  }
+  75% {
+    transform: scale(1.04, 0.98) rotate(1deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(255, 200, 90, 0.9));
+  }
+}
+
+.candle-flame {
+  animation: flameFlicker 0.9s infinite ease-in-out alternate;
+  transform-origin: bottom center;
+}
+
+@keyframes smokeRise {
+  0% {
+    transform: translateY(0) scale(0.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-40px) scale(1.8) translateX(10px);
+    opacity: 0;
+  }
+}
+
+.smoke-puff {
+  animation: smokeRise 1.6s forwards ease-out;
+}
+
+/* Floating Animations */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-2deg);
+  }
+}
+
+.float-slow {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+.float-reverse {
+  animation: floatReverse 6s ease-in-out infinite;
+}
+
+/* Sparkle twinkle animation */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.sparkle-twinkle {
+  animation: twinkle 2.5s infinite ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fdf5f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #deb3c0;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c8879b;
+}
+
+/* Parchment Letter Look */
+.letter-parchment {
+  background: #fffdfa;
+  background-image: 
+    linear-gradient(to right, rgba(230, 215, 200, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(230, 215, 200, 0.2) 1px, transparent 1px);
+  background-size: 28px 28px;
+  border: 1px solid rgba(220, 195, 180, 0.5);
+  box-shadow: 
+    0 1px 3px rgba(0,0,0,0.02),
+    0 20px 45px -10px rgba(120, 70, 85, 0.15),
+    inset 0 0 60px rgba(245, 230, 220, 0.4);
+}
+
+/* Wax Seal */
+.wax-seal {
+  background: radial-gradient(circle at 35% 35%, #d94b63, #991f34);
+  box-shadow: 
+    0 4px 14px rgba(153, 31, 52, 0.45),
+    inset 0 2px 4px rgba(255, 255, 255, 0.35),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Section Container */
+.section-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-wrapper {
+    padding: 7rem 2.5rem;
+  }
+}

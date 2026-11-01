@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbe8ec"/>
+      <stop offset="50%" stop-color="#fff8fa"/>
+      <stop offset="100%" stop-color="#f5e4dc"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="48%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#a96a57" stop-opacity="0.12"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="1200" fill="url(#bg)" />
+
+  <!-- Botanical flourishes -->
+  <g fill="#a96a57" opacity="0.18">
+    <circle cx="140" cy="140" r="14" />
+    <circle cx="165" cy="115" r="9" />
+    <path d="M 140 140 Q 220 150 260 220 Q 190 250 140 140 Z" />
+    <circle cx="760" cy="1060" r="14" />
+    <path d="M 760 1060 Q 680 1050 640 980 Q 710 950 760 1060 Z" />
+  </g>
+
+  <!-- Central Silhouette / Aesthetic Icon Frame -->
+  <circle cx="450" cy="520" r="280" fill="url(#glow)" />
+  <circle cx="450" cy="520" r="240" fill="none" stroke="#a96a57" stroke-width="1.8" stroke-dasharray="8,8" opacity="0.45" />
+
+  <g transform="translate(450, 500)">
+    <ellipse cx="0" cy="0" rx="160" ry="200" fill="#ffffff" opacity="0.88" />
+    <ellipse cx="0" cy="0" rx="150" ry="190" fill="none" stroke="#a96a57" stroke-width="2" opacity="0.75" />
+    <text x="0" y="-10" font-size="80" text-anchor="middle" dominant-baseline="central">🌻</text>
+    <text x="-90" y="-90" font-size="28" fill="#a96a57" text-anchor="middle">✦</text>
+    <text x="95" y="-70" font-size="32" fill="#a96a57" text-anchor="middle">✧</text>
+    <text x="80" y="80" font-size="26" fill="#a96a57" text-anchor="middle">✦</text>
+  </g>
+
+  <!-- Typography Card -->
+  <g transform="translate(450, 860)">
+    <rect x="-300" y="0" width="600" height="190" rx="24" fill="#ffffff" opacity="0.92" />
+    <rect x="-300" y="0" width="600" height="190" rx="24" fill="none" stroke="#a96a57" stroke-width="1.5" opacity="0.35" />
+    <text x="0" y="55" font-family="'Playfair Display', Georgia, serif" font-size="34" font-weight="700" fill="#3e242d" text-anchor="middle">
+      Warmth & Home
+    </text>
+    <text x="0" y="96" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="500" fill="#7d5964" text-anchor="middle">
+      Cherished Family Moments
+    </text>
+    <text x="0" y="142" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" fill="#a96a57" text-anchor="middle">
+      public/images/family-memory-2.jpg
+    </text>
+  </g>
+</svg>
